@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/padding"
+    android:paddingEnd="@dimen/padding"
+    android:paddingBottom="@dimen/padding_bottom"
+    tools:context=".ui.account.ProfileFragment">
+
+    <TextView
+        android:id="@+id/firstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/firstname"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/additional_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstname">
+
+        <TextView
+            android:id="@+id/sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/sex"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/dot_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/center_point" />
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/login"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/subscribed_courses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/courses_text"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/liked_exercises"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/additional_data" />
+
+    <TextView
+        android:id="@+id/liked_exercises"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/exercises_text"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/subscribed_courses"
+        app:layout_constraintTop_toBottomOf="@+id/additional_data" />
+
+    <TextView
+        android:id="@+id/human_prefers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/prefers"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="@+id/subscribed_courses"
+        app:layout_constraintTop_toBottomOf="@+id/subscribed_courses" />
+
+    <TextView
+        android:id="@+id/previous_orders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/previous_orders"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="@+id/human_prefers"
+        app:layout_constraintTop_toBottomOf="@+id/human_prefers" />
+
+    <LinearLayout
+        android:id="@+id/physical_parameters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/previous_orders">
+
+        <TextView
+            android:id="@+id/height_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/height"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="5"
+            android:inputType="number"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/weight_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/weight"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="5"
+            android:inputType="number"
+            android:text="0" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        app:layout_constraintEnd_toEndOf="@+id/physical_parameters"
+        app:layout_constraintTop_toBottomOf="@+id/physical_parameters" />
+
+    <TextView
+        android:id="@+id/change_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/change_password"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/physical_parameters" />
+
+    <TextView
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exit"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/change_password"
+        app:layout_constraintEnd_toEndOf="@+id/liked_exercises" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

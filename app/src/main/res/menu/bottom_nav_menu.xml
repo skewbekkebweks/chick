@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/home"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_courses"
+        android:icon="@drawable/course"
+        android:title="@string/title_course" />
+
+    <item
+        android:id="@+id/navigation_exercises"
+        android:icon="@drawable/exercise"
+        android:title="@string/title_exercise" />
+
+    <item
+        android:id="@+id/navigation_events"
+        android:icon="@drawable/event"
+        android:title="@string/title_event" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/profile"
+        android:title="@string/title_profile" />
+
+</menu>

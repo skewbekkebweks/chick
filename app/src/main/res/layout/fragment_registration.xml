@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/padding"
+    android:paddingEnd="@dimen/padding"
+    android:paddingBottom="@dimen/padding_bottom"
+    tools:context=".ui.account.RegistrationFragment">
+
+    <TextView
+        android:id="@+id/name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_name"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/sex"
+        app:layout_constraintEnd_toEndOf="@+id/sex"
+        app:layout_constraintStart_toStartOf="@+id/sex" />
+
+    <RadioGroup
+        android:id="@+id/sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/email_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/email"
+        app:layout_constraintStart_toStartOf="@+id/email">
+
+        <RadioButton
+            android:id="@+id/is_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/I_am_male"
+            app:layout_constraintBottom_toTopOf="@+id/email_text_view"
+            app:layout_constraintStart_toStartOf="@+id/email" />
+
+        <RadioButton
+            android:id="@+id/is_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/I_am_female"
+            app:layout_constraintBottom_toTopOf="@+id/email_text_view"
+            app:layout_constraintEnd_toEndOf="@+id/email" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/email_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_email"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintStart_toStartOf="@+id/email" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/make_password_text_view"
+        app:layout_constraintStart_toStartOf="@+id/password" />
+
+    <TextView
+        android:id="@+id/make_password_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/make_password"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintStart_toStartOf="@+id/password" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/repeat_password_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/repeat_password"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <EditText
+        android:id="@+id/repeat_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/repeat_password_text_view" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/repeat_password"
+        app:layout_constraintStart_toStartOf="@+id/repeat_password"
+        app:layout_constraintTop_toBottomOf="@+id/repeat_password" />
+
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>

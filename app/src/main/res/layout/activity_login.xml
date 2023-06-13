@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/padding"
+    android:paddingTop="@dimen/padding"
+    android:paddingEnd="@dimen/padding"
+    tools:context=".activities.account.LoginActivity">
+
+    <TextView
+        android:id="@+id/email_text_view"
+        style="@style/Chick.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintStart_toStartOf="@+id/email" />
+
+    <TextView
+        android:id="@+id/password_text_view"
+        style="@style/Chick.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/password"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <Button
+        android:id="@+id/enter"
+        style="@style/Chick.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/enter"
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <EditText
+        android:id="@+id/email"
+        style="@style/Chick.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="mihail.glazov2015@yandex.ru"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/password"
+        style="@style/Chick.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="Qwerty12"
+        app:layout_constraintStart_toStartOf="@+id/password_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/password_text_view" />
+
+    <TextView
+        android:id="@+id/forgot_password"
+        style="@style/Chick.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/enter"
+        app:layout_constraintStart_toStartOf="@+id/enter"
+        app:layout_constraintTop_toBottomOf="@+id/enter" />
+
+    <TextView
+        android:id="@+id/registrarion"
+        style="@style/Chick.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/registration"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/enter"
+        app:layout_constraintStart_toStartOf="@+id/enter"
+        app:layout_constraintTop_toBottomOf="@+id/forgot_password" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+</androidx.constraintlayout.widget.ConstraintLayout>
